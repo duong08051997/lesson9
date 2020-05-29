@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>xếp loại học lực của học sinh</title>
+</head>
+<body>
+<h1>Nhập vào điểm kiểm tra của học sinh </h1>
+<p>Điểm kiểm tra 15 phút :</p>
+<input id="test15" type="text">
+<p>Điểm kiểm tra 1 tiết :</p>
+<input id="test1hour" type="text">
+<p>Điểm kiểm tra giữa học kì 1:</p>
+<input id="testHaft1" type="text">
+<p>Điểm kiểm tra học kì 1 :</p>
+<input id="testHk1" type="text">
+<p>Điểm kiểm tra giữa học kì 2 :</p>
+<input id="testHaft2" type="text">
+<p>Điểm kiểm tra học kì 2 :</p>
+<input id="testHk2" type="text">
+<p>Điểm kiểm tra tổng kết năm :</p>
+<input id="testOver" type="text"><br/>
+
+<input style="margin-top: 10px" id="diemTB" type="button" onclick="clickMe()" value="xếp loại">
+<p id="result"></p>
+</body>
+<script>
+        function clickMe() {
+            let test15 = +document.getElementById('test15').value;
+            let test1hour = +document.getElementById('test1hour').value;
+            let testHaft1 = +document.getElementById('testHaft1').value;
+            let testHk1 = +document.getElementById('testHk1').value;
+            let testHaft2 = +document.getElementById('testHaft2').value;
+            let testHk2 = +document.getElementById('testHk2').value;
+            let testOver = +document.getElementById('testOver').value;
+            let diemTB = Math.round((test15 + test1hour + testHaft1 + testHk1*2 + testHaft2 + testHk2*2 + testOver*3) / 11);
+            let result = document.getElementById('result');
+
+                if (test15 > 10 || test1hour > 10 || testHaft1 > 10 || testHaft2 > 10 || testHk1 > 10 || testHk2 > 10 || testOver > 10) {
+                    alert('bạn hãy nhập lại điểm');
+                } else if (diemTB >= 8 && diemTB <= 10) {
+                    result.innerHTML = `học sinh có điểm trung bình môn là ${diemTB} xếp loại học lực Giỏi`;
+                } else if (diemTB >= 6 && diemTB < 8) {
+                    result.innerHTML = `học sinh có điểm trung bình môn là ${diemTB} xếp loại học lực Khá`;
+                } else if (diemTB >= 4 && diemTB < 6) {
+                    result.innerHTML = `học sinh có điểm trung bình môn là ${diemTB} xếp loại học lực Trung Bình`;
+                } else {
+                    result.innerHTML = `học sinh có điểm trung bình môn là ${diemTB} xếp loại học lực Yếu`;
+                }
+
+
+
+        }
+</script>
+</html>

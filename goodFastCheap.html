@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ngon bố rẻ</title>
+    <style>
+        /*#good{*/
+        /*    background-color: red;*/
+        /*}*/
+    </style>
+</head>
+<body>
+    <input id="good" type="checkbox" onchange="changed(id)"/>
+    <label for="good" >Good</label><br/>
+    <input id="fast" type="checkbox" onchange="changed(id)"/>
+    <label for="fast" >Fast</label><br/>
+    <input id="cheap" type="checkbox" onchange="changed(id)"/>
+    <label for="cheap" >Cheap</label>
+</body>
+<script>
+    let good = document.getElementById('good');
+    let fast = document.getElementById('fast');
+    let cheap = document.getElementById('cheap');
+
+    function changed(id) {
+        switch (id) {
+            case "good":
+                if(fast.checked && cheap.checked){
+                    cheap.checked=false;
+                }
+                break;
+            case "fast":
+                if(good.checked && cheap.checked){
+                    good.checked = false;
+                }
+                break;
+            case "cheap":
+                if(fast.checked && good.checked){
+                    fast.checked = false;
+                }
+                break;
+        }
+
+
+
+    }
+</script>
+</html>

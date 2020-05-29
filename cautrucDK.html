@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>cấu trúc điều kiện</title>
+</head>
+<body>
+
+<script>
+    //Nhập vào 2 số rồi in ra a có chia hết cho b không
+   /* let a = +prompt('a = ','');
+    let b = +prompt('b = ','');
+        if(a == null || b == null){
+        alert('Nhập số đi bạn êi');
+    }
+       if(a % b == 0){
+            alert('a chia hết cho b');
+        } else {
+            alert('a không chia hết cho b');
+        }
+
+        //Nhập vào tuổi bất kì xem có đủ tuổi vào lớp 10 không
+    let x = +prompt('nhập tuổi học sinh');
+        if(x < 15){
+            alert('Học sinh chưa đủ tuổi học lớp 10');
+        }else {
+            alert('học sinh đã quá tuổi vào lớp 10')
+        }
+
+        //nhập vào số bất kì xem đây là số lớn hay nhỏ hơn 0
+        let c = +prompt('Nhập vào số bất kì');
+        if(c>0){
+            alert('Đây là số lớn hơn 0')
+        }else {
+            alert('Đây là số nhỏ hơn 0')
+        }*/
+        let d = +prompt('Nhập vào số thứ nhất');
+        let e = +prompt('Nhập vào số thứ 2');
+        let f = +prompt('Nhập vào số thứ 3');
+        let max = d;
+        if(e>max&&e>f){
+           max = e;
+        }else if(f>max&&f>e){
+            max = f;
+        }else {
+            max = d;
+        }
+        console.log(1);
+       alert('số lớn nhất là '+ max);
+
+</script>
+</body>
+</html>

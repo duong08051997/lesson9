@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>luyện tập cấu trúc if/else</title>
+</head>
+<body>
+   <!-- <script>
+        let useName = prompt('Who is there?', '');
+        if(useName =='Duong'){
+            let pass = prompt('Password?', '');
+            if(pass == 'gaubeo0212'){
+                alert('Welcome!');
+            }else if(pass == null){
+                alert('canceled');
+            }else{
+                alert('Wrong password');
+            }
+
+        }else if(useName == null){
+            alert('canceled');
+        }else {
+            alert("I don't know");
+        }
+    </script>-->
+<script>
+    let username = prompt('email hoặc số điện thoại','     @gmail.com');
+    if (username == "duong08051997@gmail.com"){
+        let pass = prompt("password",'');
+        if(pass === 'gaubeo0212'){
+            alert('Đăng nhập thành công');
+        }else if(pass == null){
+            alert('hủy');
+        }else {
+            alert('Mật khẩu không đúng')
+        }
+    }else if(username == null){
+        alert('Hủy');
+    }else{
+        alert('email hoặc số điện thoại không đúng');
+    }
+
+</script>
+</body>
+</html>

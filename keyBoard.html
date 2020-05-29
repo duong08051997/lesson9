@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>sự kiện bàn phím</title>
+</head>
+<body >
+
+
+<img id="nikita" src="img/nobita.png" height="120" width="80"/>
+<script>
+    const left = "a";
+    const right = "d";
+    const  up = "w";
+    const down ="s";
+        function upA() {
+            let element = document.getElementById('nikita');
+            element.style.top = parseInt(element.style.top) - 5 + 'px';
+        }
+        function downA() {
+            let element = document.getElementById('nikita');
+            element.style.top = parseInt(element.style.top) + 5 + 'px';
+        }
+        function leftA() {
+            let element = document.getElementById('nikita');
+            element.style.left = parseInt(element.style.left) - 5 + 'px';
+        }
+        function rightA() {
+            let element = document.getElementById('nikita');
+            element.style.left = parseInt(element.style.right) + 5 + 'px';
+
+        }
+        function moveSelect(evt) {
+            switch (evt.key) {
+                case "a":
+                    leftA();
+                    break;
+                 case "d":
+                     rightA();
+                     break;
+                 case "w":
+                     upA();
+                     break;
+                 case "s":
+                     downA();
+                     break;
+            }
+        }
+
+        function docReady() {
+            window.addEventListener('keydown', moveSelect);
+        }
+
+</script>
+<body onload = "docReady()"></body>
+</body >
+</html>
